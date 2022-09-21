@@ -26,7 +26,7 @@ int main()
 
     printf("CHARACTER COUNT:\n");
     for (i = 0; i < ALPHABET_SIZE; ++i) {
-        printf("%c: %5d ", (i + 'A'), freq[i]);
+        printf("%c: %6d ", (i + 'A'), freq[i]);
         for (j = 0; j < (int)(HISTOGRAM_BAR_LENGTH * freq[i] / (float)max); ++j)
             printf("|");
         printf("\n");

@@ -2,7 +2,8 @@
 
 int main()
 {
-    int c, b, t, nl = 0;
+    int c, b, t, nl;
+    c = b = t = nl = 0;
 
     while ((c = getchar()) != EOF) {
         switch (c)

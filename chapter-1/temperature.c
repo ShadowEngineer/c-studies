@@ -2,6 +2,16 @@
 /* print Fahrenheit-Celsius table
     for fahr = 0, 20, ..., 300 */
 
+float to_celsius(int f)
+{
+    return ((5.0/9.0) * (f - 32.0));
+}
+
+float to_fahrenheit(int c)
+{
+    return ((9.0/5.0) * c + 32.0);
+}
+
 int main()
 {
     float fahr, celsius;
@@ -11,18 +21,18 @@ int main()
     upper = 300;    // the higher limit of the temperature scale
     step = 20;      // the incremental steps of temperature between each iteration
 
-    printf("Fahrenheit first:\n");
+    printf("From Fahrenheit to Celsius:\n");
     fahr = lower;
     while (fahr <= upper) {
-        celsius = (5.0/9.0) * (fahr - 32.0);
+        celsius = to_celsius(fahr);
         printf("%3.0f\t%6.1f\n", fahr, celsius);
         fahr += step;
     }
 
-    printf("Celsius second:\n");
+    printf("From Celsius to Fahrenheit:\n");
     celsius = lower;
     while (celsius <= upper) {
-        fahr = (9.0/5.0) * celsius + 32.0;
+        fahr = to_fahrenheit(celsius);
         printf("%3.0f\t%6.1f\n", celsius, fahr);
         celsius += step;
     }

@@ -1,0 +1,5 @@
+exercise 1-20: detab
+exercise 1-21: entab
+exercise 1-22: fold
+exercise 1-23: remove_comments
+exercise 1-24: syntax_check

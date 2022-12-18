@@ -8,8 +8,8 @@ int main()
     printf("%d\n", htoi("9a"));     // 154
     printf("%d\n", htoi("1234F"));  // 74575
     printf("%d\n", htoi("FFFFFF")); // 16777215
-    // printf("%d\n", htoi("0xFF"));
-    // printf("%d\n", htoi("0XFF"));
+    printf("%d\n", htoi("0xFF"));   // 255
+    printf("%d\n", htoi("0XFF"));   // 255
 }
 
 int htoi(char s[])
@@ -17,7 +17,14 @@ int htoi(char s[])
     int i, n;
 
     n = 0;
-    for (i = 0; (s[i] >= '0' && s[i] <= '9') || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F'); ++i) {
+    i = 0;
+    // handling 0x and 0X
+    if (s[0] == '0' && (s[1] == 'x' || s[1] == 'X')) {
+        i = 2;
+    }
+
+    // hanlding the rest
+    for (i = i; (s[i] >= '0' && s[i] <= '9') || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F'); ++i) {
         n *= 16;
         if (s[i] >= '0' && s[i] <= '9') {
             n += s[i] - '0';

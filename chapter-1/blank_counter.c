@@ -1,3 +1,9 @@
+/**
+ * File   : blank_counter.c
+ * License: GNU v3.0
+ * Author : Mark Elbre <mje248@student.bham.ac.uk>
+ * Date   : 18.07.2023
+ */
 #include <stdio.h>
 
 int main()

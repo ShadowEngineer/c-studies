@@ -13,19 +13,24 @@ int main()
 
     state = OUT;
     cwl = 0;
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF)
+    {
         if (c == ' ' || c == '\t' || c == '\n')
             state = OUT;
-        else if (state == OUT) {
+        else if (state == OUT)
+        {
             state = IN;
             wls[cwl] += 1;
             cwl = 0;
-        } else {
+        }
+        else
+        {
             ++cwl;
         }
     }
 
-    for (i = 0; i <= MAX_WORD_LENGTH; ++i) {
+    for (i = 0; i <= MAX_WORD_LENGTH; ++i)
+    {
         printf("%2d - %3d: ", i, wls[i]);
         for (j = 0; j < wls[i]; ++j)
             printf("#");

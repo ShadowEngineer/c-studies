@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define TAB_COLUMN_WIDTH 8      // the maximum number of blanks equivalent to a tab
+#define TAB_COLUMN_WIDTH 8 // the maximum number of blanks equivalent to a tab
 
 int main(int argc, char **argv)
 {

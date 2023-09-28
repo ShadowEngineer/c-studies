@@ -6,13 +6,18 @@ int main()
     bool hasReplaced = false;
     int c;
 
-    while ((c = getchar()) != EOF) {
-        if (c == ' ') {
-            if (hasReplaced == false) {
+    while ((c = getchar()) != EOF)
+    {
+        if (c == ' ')
+        {
+            if (hasReplaced == false)
+            {
                 hasReplaced = true;
                 putchar(c);
             }
-        } else {
+        }
+        else
+        {
             hasReplaced = false;
             putchar(c);
         }

@@ -15,23 +15,29 @@ int main()
     // reverse(string_1, 45);
     // reverse(string_2, 46);
     // printf("%s", string_1);
-    // printf("%s\n", string_2); 
+    // printf("%s\n", string_2);
 
     int c, i, j;
     char cur_line[MAX_LINE_LENGTH];
 
     i = 0;
-    while ((c = getchar()) != EOF) {
-        if (c == '\n') {
-            if (i > 0 && i <= MAX_LINE_LENGTH - 1) {
+    while ((c = getchar()) != EOF)
+    {
+        if (c == '\n')
+        {
+            if (i > 0 && i <= MAX_LINE_LENGTH - 1)
+            {
                 reverse(cur_line, i);
-                for (j = 0; j < i; ++j) {
+                for (j = 0; j < i; ++j)
+                {
                     putchar(cur_line[j]);
                 }
                 putchar('\n');
             }
             i = 0;
-        } else {
+        }
+        else
+        {
             cur_line[i] = c;
             ++i;
         }
@@ -41,7 +47,8 @@ int main()
 void reverse(char to_reverse[], int limit)
 {
     int i;
-    for (i = 0; i <= ((limit - 1) / 2); ++i) {
+    for (i = 0; i <= ((limit - 1) / 2); ++i)
+    {
         swap(to_reverse, i, limit - 1 - i);
     }
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#define IN 1        // in a word
-#define OUT 2       // out of a word
+#define IN 1  // in a word
+#define OUT 2 // out of a word
 
 int main()
 {
@@ -9,13 +9,15 @@ int main()
 
     state = OUT;
     nl = nw = nc = 0;
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF)
+    {
         ++nc;
         if (c == '\n')
             ++nl;
         if (c == ' ' || c == '\n' || c == '\t')
             state = OUT;
-        else if (state == OUT) {
+        else if (state == OUT)
+        {
             putchar('\n'); // every word gets a new line
             state = IN;
             ++nw;

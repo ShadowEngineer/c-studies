@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # compiles and executes the given C source file.
-run() {
+run_file() {
     if [[ -e $1 ]]; then
         clear
         gcc $1 -o output

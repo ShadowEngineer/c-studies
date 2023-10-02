@@ -19,18 +19,25 @@ int htoi(char s[])
     n = 0;
     i = 0;
     // handling 0x and 0X
-    if (s[0] == '0' && (s[1] == 'x' || s[1] == 'X')) {
+    if (s[0] == '0' && (s[1] == 'x' || s[1] == 'X'))
+    {
         i = 2;
     }
 
     // hanlding the rest
-    for (i = i; (s[i] >= '0' && s[i] <= '9') || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F'); ++i) {
+    for (i = i; (s[i] >= '0' && s[i] <= '9') || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F'); ++i)
+    {
         n *= 16;
-        if (s[i] >= '0' && s[i] <= '9') {
+        if (s[i] >= '0' && s[i] <= '9')
+        {
             n += s[i] - '0';
-        } else if (s[i] >= 'a' && s[i] <= 'f') {
+        }
+        else if (s[i] >= 'a' && s[i] <= 'f')
+        {
             n += s[i] + 10 - 'a';
-        } else {
+        }
+        else
+        {
             n += s[i] + 10 - 'A';
         }
     }
